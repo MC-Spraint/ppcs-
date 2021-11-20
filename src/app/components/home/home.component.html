@@ -1,0 +1,157 @@
+<div id="1st">
+    <div id="header">
+        <h5>Tutor login information</h5>
+
+    </div>
+    <div class="container myclass2">
+        <div class="row pt-5">
+            <div class="col-md-6 mx-auto">
+                <div class="card rounded-0">
+        
+        
+                    
+        
+                    <div class="card-header frm">
+                        <h3 class="mb-0">Form No: 1</h3>
+                    </div>
+                    <div class="card-body">
+        
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="name">Desired Username</label>
+                                <input [(ngModel)]="registerUserData.name" name="name" type="text"
+                                    class="form-control rounded-0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Chooose Password</label>
+                                <input [(ngModel)]="registerUserData.password" name="password" type="password"
+                                    class="form-control rounded-0" required>
+                            </div>
+                            <div>
+                                <span><b>Secret Question: </b> <br></span>
+                                
+                                <select name="question" id="question" style="width:15rem;">
+                                <option value="none" selected disabled hidden>Select question</option>
+                                    <option *ngFor="let v of val" [value] = v >{{v}}</option>
+                                </select>
+                                </div>
+                            <div class="form-group">
+                                <label for="repeat-password">Answere</label> <input
+                                    [(ngModel)]="registerUserData.question" name="repeat-password" type="password"
+                                    class="form-control rounded-0" required>
+        
+                                <button (click)="registerUser()" type="button" class="btn btn-success p-2 mt-2">Register</button>
+        
+                            </div>
+        
+                        </form>
+        
+                    </div>
+        
+                </div>
+            </div>
+        
+        </div>
+        </div>
+
+    
+</div>
+<div id="2nd">
+    <div id="header2">
+        <h5>Personal details & Tutor contact information</h5>
+
+    </div>
+    <div class="container myclass2">
+        <div class="row pt-5">
+            <div class="col-md-6 mx-auto">
+                <div class="card rounded-0">
+        
+        
+                    
+        
+                    <div class="card-header frm">
+                        <h3 class="mb-0">Form No: 2</h3>
+                    </div>
+                    <div class="card-body">
+        
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input [(ngModel)]="registerUserData.name" name="name" type="text"
+                                    class="form-control rounded-0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Gender</label>
+                                <input [(ngModel)]="registerUserData.Gender" name="password" type="password"
+                                    class="form-control rounded-0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Age</label>
+                                <input [(ngModel)]="registerUserData.age" name="password" type="password"
+                                    class="form-control rounded-0" required>
+                            </div>
+                            <div>
+                                <span><b>Country: </b> <br></span>
+                                
+                                <select [(ngModel)]="registerUserData.country" name="question" id="question" style="width:15rem;">
+                                <option value="none" selected disabled hidden>India</option>
+                                    
+                                </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Location</label>
+                                    <input [(ngModel)]="registerUserData.location" name="password" type="password"
+                                        class="form-control rounded-0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Postal/Zip-code</label>
+                                    <input [(ngModel)]="registerUserData.location" name="password" type="password"
+                                        class="form-control rounded-0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Area</label>
+                                    <input [(ngModel)]="registerUserData.location" name="password" type="password"
+                                        class="form-control rounded-0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Present Address</label>
+                                    <input [(ngModel)]="registerUserData.address" name="password" type="password"
+                                        class="form-control rounded-0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contact Number</label>
+                                    <input [(ngModel)]="registerUserData.contactnum" name="password" type="password"
+                                        class="form-control rounded-0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Email Address</label>
+                                    <input [(ngModel)]="registerUserData.email" name="password" type="password"
+                                        class="form-control rounded-0" required>
+                                </div>
+                                <div class="form-group">
+
+                                    <input [(ngModel)]="registerUserData.img" name="img" type="file" (change)=onSelect($event)
+                                        class="form-control rounded-0 mb-2" required>
+    
+    
+                                    <button type="button" class="btn btn-success" (click)="uploadPhoto()">Upload</button>
+    
+                                </div>
+        
+                                <button (click)="registerUser()" type="button" class="btn btn-success p-2 mt-2">Register</button>
+                            </form>
+        
+                            </div>
+        
+                       
+        
+                    </div>
+        
+                </div>
+            </div>
+        
+        </div>
+        </div>
+
+
+
